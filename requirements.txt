@@ -1,5 +1,9 @@
 Flask~=1.1.2
+gunicorn==20.1.0
 requests~=2.25.1
 gpt-2-simple==0.7.2
 sentencepiece==0.1.95
 tensorflow==2.4.1
+numpy==1.19.5
+transformers==4.5.0
+torch==1.8.1
