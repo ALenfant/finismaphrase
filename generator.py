@@ -34,11 +34,11 @@ class Generator:
             decoded_output.append(self.tokenizer.decode(sample, skip_special_tokens=True))
         return decoded_output
 
-    def complete(self, prefix):
+    def complete(self, prefix, length=80):
         # encode input context
         input_ids = self.tokenizer(prefix, return_tensors="pt").input_ids
         # generate a candidate using sampling
-        outputs = self.model.generate(input_ids=input_ids, max_length=200, num_return_sequences=1, do_sample=True)
+        outputs = self.model.generate(input_ids=input_ids, max_length=length, num_return_sequences=1, do_sample=True)
         decoded_output = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)
         return decoded_output[0]
 
