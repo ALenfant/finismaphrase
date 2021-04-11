@@ -12,7 +12,7 @@ class SentimentAnalyzer:
         """
         Initializes everything, takes a bit of time
         """
-        cache_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "hfcache")
+        cache_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "storage", "hfcache")
 
         # Load pretrained model and tokenizer
         model = TFAutoModelForSequenceClassification.from_pretrained("tblard/tf-allocine", cache_dir=cache_path)

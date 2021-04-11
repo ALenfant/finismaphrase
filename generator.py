@@ -6,7 +6,7 @@ from transformers import GPT2Tokenizer, GPT2LMHeadModel
 
 class Generator:
     def __init__(self):
-        cache_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "hfcache")
+        cache_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "storage", "hfcache")
 
         # Load pretrained model and tokenizer
         self.model = GPT2LMHeadModel.from_pretrained("antoiloui/belgpt2", cache_dir=cache_path)
