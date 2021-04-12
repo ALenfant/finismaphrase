@@ -142,4 +142,3 @@ cython_debug/
 .DS_Store
 .idea/
 storage/
-last_id.txt

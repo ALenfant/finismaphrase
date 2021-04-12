@@ -14,7 +14,7 @@ TWEET_LENGTH = 280
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
-path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "last_id.txt")
+path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "storage", "last_id.txt")
 sentence_completer = SentenceCompleter()
 pattern = re.compile("@%s" % BOT_NAME, re.IGNORECASE)
 
@@ -62,9 +62,10 @@ if __name__ == "__main__":
     logger.info("Initializing bot runner")
     api = create_api()
     since_id = read_last_id()
+    logger.info(f"Mentions starting from {since_id}")
     while True:
         since_id = check_mentions(api, ["help", "support"], since_id)
         write_last_id(since_id)
-        logger.info("Waiting...")
+        logger.info(f"Checked {since_id}. Waiting...")
         time.sleep(60)
 
