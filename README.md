@@ -1,6 +1,8 @@
-# CompleteMaPhrase
+# FinisMaPhrase
 
 Twitter bot that replies to messages with a complete phrase in French.
+
+To see it in action, look here: https://twitter.com/FinisMaPhrase/with_replies
 
 Based on [BelGTP2](https://huggingface.co/antoiloui/belgpt2) model (GPT-2 retrained for French) for text generation and [TF-Allocine](https://huggingface.co/tblard/tf-allocine) (based on CamemBERT itself based on BERT) for sentiment analysis.
 
