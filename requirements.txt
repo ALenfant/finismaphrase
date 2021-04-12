@@ -7,3 +7,4 @@ tensorflow==2.4.1
 numpy==1.19.5
 transformers==4.5.0
 torch==1.8.1
+tweepy==3.10.0
